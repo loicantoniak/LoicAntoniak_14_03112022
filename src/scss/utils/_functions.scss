@@ -1,0 +1,16 @@
+@use "sass:math";
+
+@function rem($pixels) {
+    @return #{round(math.div($pixels, $base-fontSize) * 1000) * 0.001}rem;
+}
+
+@function spacing-multiple($multiplier) {
+    @return #{math.div($spacing-root-value * $multiplier, $base-fontSize)}rem;
+}
+
+$spacing-level1: spacing-multiple(1);
+$spacing-level2: spacing-multiple(2);
+$spacing-level3: spacing-multiple(3);
+$spacing-level4: spacing-multiple(4);
+$spacing-level5: spacing-multiple(5);
+$spacing-level6: spacing-multiple(6);

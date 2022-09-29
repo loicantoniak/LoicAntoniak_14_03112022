@@ -1,0 +1,25 @@
+$base-fontFamily: "Poppins", Helvetica, Arial, sans-serif;
+$base-fontSize: 16; //px
+$base-lineHeight: 1.875rem;
+
+$color-bg: rgba(60, 109, 71, 0.31);
+
+$color-grey1: #333;
+$color-grey2: #666;
+$color-grey3: #727272;
+$color-grey4: #f1f3f6;
+$color-white: #ffffff;
+
+$color-border: rgba(255, 255, 255, 0.3);
+$color-border2: #ddd;
+
+$transition-time-long: 1000ms;
+$transition-time: 500ms;
+$transition-time-short: 300ms;
+$spacing-root-value: 8; //px
+
+$breakpoints: (
+  tablet: 768px,
+  desktop: 992px,
+  largeScreen: 1200px,
+);

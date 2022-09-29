@@ -1,0 +1,15 @@
+body {
+    font: 400 rem(14) $base-fontFamily;
+    color: $color-grey3;
+    line-height: $base-lineHeight;
+    font-weight: 300;
+    @media (min-width: 1025px) {
+      font-size: rem($base-fontSize);
+    }
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
