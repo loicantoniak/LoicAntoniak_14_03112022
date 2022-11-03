@@ -1,21 +1,16 @@
-$base-fontFamily: "Poppins", Helvetica, Arial, sans-serif;
+$base-fontFamily: "Montserrat", Helvetica, Arial, sans-serif;
 $base-fontSize: 16; //px
 $base-lineHeight: 1.875rem;
 
-$color-bg: rgba(60, 109, 71, 0.31);
-
-$color-grey1: #333;
-$color-grey2: #666;
-$color-grey3: #727272;
-$color-grey4: #f1f3f6;
+$color-bg: #f1f3f6;
 $color-white: #ffffff;
+$color-primary: #202f4d;
+$color-secondary: #fe9263;
+$color-border: #d1dce4;
+$color-warning: #eb4040;
 
-$color-border: rgba(255, 255, 255, 0.3);
-$color-border2: #ddd;
+$color-blue1: lighten($color-primary, 30%);
 
-$transition-time-long: 1000ms;
-$transition-time: 500ms;
-$transition-time-short: 300ms;
 $spacing-root-value: 8; //px
 
 $breakpoints: (

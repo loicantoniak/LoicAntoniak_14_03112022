@@ -1,0 +1,19 @@
+@import "../../scss/utils/variables";
+@import "../../scss/utils/functions";
+@import "../../scss//utils/mixins";
+
+.container {
+  margin: auto;
+  margin-top: 3rem;
+  max-width: rem(700);
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.createForm {
+    display: flex;
+    flex-direction: column;
+    
+}

@@ -1,0 +1,11 @@
+@import "../../scss/utils/variables";
+@import "../../scss/utils/functions";
+@import "../../scss//utils/mixins";
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: $spacing-level6;
+}

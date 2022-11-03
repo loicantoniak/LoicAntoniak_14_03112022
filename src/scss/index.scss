@@ -1,13 +1,14 @@
+// Utils
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/utilities";
+
 // Vendors
 
-// Utils
-@import './utils/variables';
-@import './utils/mixins';
-@import './utils/functions';
-@import './utils/utilities';
-
 // Base
-@import './base/base';
+@import "./base/base";
+@import "./base/typography";
 
 // Components
-
+@import "./components/button"

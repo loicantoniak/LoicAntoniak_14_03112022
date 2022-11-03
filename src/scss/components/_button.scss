@@ -1,0 +1,41 @@
+.btn {
+  align-items: center;
+  border-radius: 0.1875rem;
+  display: flex;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.14286;
+  padding: 0.688rem 1.25rem;
+  text-align: center;
+  transition: all 0.3s;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  box-shadow: none;
+
+  &-primary {
+    background: $color-secondary;
+    border: thin solid $color-secondary;
+    color: $color-white;
+
+    &:hover,
+    &:active {
+      background-color: darken($color-secondary, 10%);
+    }
+  }
+
+  &-secondary {
+    background-color: $color-white;
+    border: thin solid $color-primary;
+    color: $color-primary;
+
+    &:hover,
+    &:active {
+      color: $color-blue1;
+      border: thin solid $color-blue1;
+    }
+  }
+}

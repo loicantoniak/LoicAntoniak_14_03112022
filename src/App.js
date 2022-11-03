@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react"
+import { Provider } from "react-redux"
+import Navigation from "./pages/navigation/Navigation"
+import store from "./redux/store"
 
 export default function App() {
   return (
-    <div>App</div>
+    <Provider store={store}>
+      <Navigation />
+    </Provider>
   )
 }
-
-
