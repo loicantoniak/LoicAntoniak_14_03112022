@@ -1,11 +1,13 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createSlice, nanoid } from "@reduxjs/toolkit"
 
 const employeeSlice = createSlice({
   name: "employee",
   initialState: [],
   reducers: {
     setEmployeesList(state, action) {
-      return action.payload
+      const newEmployee = { ...action.payload, id: nanoid() }
+      state.push(newEmployee)
+      return state
     },
     removeEmployee(state, action) {
       const employeeId = action.payload
@@ -14,8 +16,6 @@ const employeeSlice = createSlice({
   },
 })
 
-
-export const { setEmployeesList, removeEmployee } =
-employeeSlice.actions
+export const { setEmployeesList, removeEmployee } = employeeSlice.actions
 
 export default employeeSlice.reducer

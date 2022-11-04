@@ -8,6 +8,8 @@ import "react-datepicker/dist/react-datepicker.css"
 import Select from "react-select"
 import { states } from "../../lib/states"
 import { departments } from "../../lib/departments"
+import { setEmployeesList } from "../../redux/reducers/employees"
+import { useDispatch } from "react-redux"
 
 const employee = {
   firstName: "",
@@ -34,12 +36,19 @@ const employeeSchema = Yup.object().shape({
 })
 
 export default function CreateEmployee() {
+  const dispatch = useDispatch()
   const [isClearable] = useState(true)
   const [isSearchable] = useState(true)
   const state_options = states.map((state) => ({ value: state.abbreviation, label: state.name }))
 
   function handleSubmit(values) {
-    console.log(values)
+    const data = {
+      ...values,
+      birthDate: values.birthDate.toString(),
+      startDate: values.startDate.toString(),
+    }
+
+    dispatch(setEmployeesList(data))
   }
 
   return (
@@ -65,6 +74,14 @@ export default function CreateEmployee() {
                   name="birthDate"
                   id="birthDate"
                   onChange={(date) => formik.setFieldValue("birthDate", date)}
+                  maxDate={new Date()}
+                  showDisabledMonthNavigation
+                  fixedHeight
+                  placeholderText="Click to select a date"
+                  peekNextMonth
+                  showMonthDropdown
+                  showYearDropdown
+                  dropdownMode="select"
                 />
                 <ErrorMessage name="birthDate">{(error) => <div className="error">{error}</div>}</ErrorMessage>
               </div>
@@ -77,6 +94,10 @@ export default function CreateEmployee() {
                   name="startDate"
                   id="startDate"
                   onChange={(date) => formik.setFieldValue("startDate", date)}
+                  maxDate={new Date()}
+                  showDisabledMonthNavigation
+                  fixedHeight
+                  placeholderText="Click to select a date"
                 />
                 <ErrorMessage name="startDate">{(error) => <div className="error">{error}</div>}</ErrorMessage>
               </div>
