@@ -10,14 +10,14 @@ export default function Header() {
     <div className={style.container}>
       <h1>HRnet</h1>
       {location.pathname === "/" && (
-        <Link to="/create">
-          <button className="btn btn-primary">Create Employee</button>
+        <Link to="/employees">
+          <button className="btn btn-primary">View Current Employees</button>
         </Link>
       )}
 
-      {location.pathname === "/create" && (
+      {location.pathname === "/employees" && (
         <Link to="/">
-          <button className="btn btn-secondary">Retour</button>
+          <button className="btn btn-secondary">Home</button>
         </Link>
       )}
     </div>

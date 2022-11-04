@@ -12,8 +12,8 @@ export default function Navigation() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<EmployeeList />} />
-          <Route path="/create" element={<CreateEmployee />} />
+          <Route path="/" element={<CreateEmployee />} />
+          <Route path="/employees" element={<EmployeeList />} />
           <Route path="*" element={<NoMatch />} />
         </Routes>
       </BrowserRouter>

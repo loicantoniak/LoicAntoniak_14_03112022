@@ -1,0 +1,27 @@
+.form-control {
+  @include font-body;
+
+  font-family: inherit;
+  color: $color-primary;
+  background: $color-white;
+  border: thin solid $color-border;
+  padding: rem(4) $spacing-level2;
+  height: rem(44);
+  transition: border $transition-time, box-shadow $transition-time;
+  width: 100%;
+
+  &:focus,
+  &:active {
+    box-shadow: 0 0 rem(15) $colors-shadows-inputFocus !important;
+    background: $color-white;
+    border: thin solid $color-secondary;
+    border-radius: $border-radius;
+    outline: none;
+  }
+}
+
+.error {
+  @include font-body-small;
+  color: $color-warning;
+  margin-top: rem(5);
+}

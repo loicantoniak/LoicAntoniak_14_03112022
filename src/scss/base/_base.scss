@@ -18,3 +18,11 @@ body {
 a {
   text-decoration: none;
 }
+
+h1 {
+  @include font-headline-1;
+}
+
+h2 {
+  @include font-headline-2;
+}

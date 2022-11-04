@@ -4,12 +4,16 @@ $base-lineHeight: 1.875rem;
 
 $color-bg: #f1f3f6;
 $color-white: #ffffff;
-$color-primary: #202f4d;
-$color-secondary: #fe9263;
+$color-primary: #0b0b0d;
+$color-secondary: #6f850b;
+$color-interactive: #5b6f0b;
 $color-border: #d1dce4;
 $color-warning: #eb4040;
 
-$color-blue1: lighten($color-primary, 30%);
+$colors-shadows-inputFocus: rgba($color-secondary, 0.15);
+
+$transition-time: 300ms;
+$border-radius: 3px;
 
 $spacing-root-value: 8; //px
 

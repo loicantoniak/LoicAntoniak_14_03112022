@@ -17,32 +17,25 @@
 }
 
 @mixin font-headline-1 {
-  @include font-size-rem(48);
-  @include line-height-percent(48, 58);
+  @include font-size-rem(40);
+  @include line-height-percent(40, 40);
   font-weight: bold;
   letter-spacing: -0.006em;
 }
 
 @mixin font-headline-2 {
-
-}
-
-@mixin font-headline-3 {
-
-}
-
-@mixin font-headline-4 {
-
-}
-
-@mixin font-body-large {
-
+  @include font-size-rem(32);
+  @include line-height-percent(32, 40);
+  font-weight: bold;
 }
 
 @mixin font-body {
-
+  @include font-size-rem(16);
+  @include line-height-percent(16, 15);
 }
 
 @mixin font-body-small {
-
+  @include font-size-rem(14);
+  @include line-height-percent(14, 15);
+  font-weight: 300;
 }

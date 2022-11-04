@@ -29,13 +29,13 @@
 
   &-secondary {
     background-color: $color-white;
-    border: thin solid $color-primary;
-    color: $color-primary;
+    border: thin solid $color-secondary;
+    color: $color-secondary;
 
     &:hover,
     &:active {
-      color: $color-blue1;
-      border: thin solid $color-blue1;
+      color: $color-interactive;
+      border: thin solid $color-interactive;
     }
   }
 }

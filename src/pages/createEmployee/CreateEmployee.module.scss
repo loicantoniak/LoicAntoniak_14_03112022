@@ -10,10 +10,25 @@
   h2 {
     text-align: center;
   }
+
+  button {
+    margin: auto;
+  }
+
+  fieldset {
+    padding: 0 2rem;
+    margin: 0 -2rem 2rem;
+  }
+
+  legend {
+    margin-left: 3rem;
+    padding: 0 1rem;
+  }
 }
 
-.createForm {
-    display: flex;
-    flex-direction: column;
-    
+.group {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1rem;
 }
