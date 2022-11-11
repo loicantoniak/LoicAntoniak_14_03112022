@@ -9,7 +9,8 @@ import Select from "react-select"
 import { states } from "../../lib/states"
 import { departments } from "../../lib/departments"
 import { setEmployeesList } from "../../redux/reducers/employees"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
+import { useEffect } from "react"
 
 const employee = {
   firstName: "",
@@ -40,15 +41,21 @@ export default function CreateEmployee() {
   const [isClearable] = useState(true)
   const [isSearchable] = useState(true)
   const state_options = states.map((state) => ({ value: state.abbreviation, label: state.name }))
+  const employees = useSelector((state) => state.employees)
 
-  function handleSubmit(values) {
+  useEffect(() => {}, [employees])
+
+  function handleSubmit(values, { resetForm }) {
     const data = {
       ...values,
       birthDate: values.birthDate.toString(),
       startDate: values.startDate.toString(),
     }
 
-    dispatch(setEmployeesList(data))
+    localStorage.setItem("employees", JSON.stringify([...employees, data]))
+
+    dispatch(setEmployeesList([...employees, data]))
+    resetForm(employee)
   }
 
   return (

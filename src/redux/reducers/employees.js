@@ -1,12 +1,11 @@
-import { createSlice, nanoid } from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit"
 
 const employeeSlice = createSlice({
   name: "employee",
   initialState: [],
   reducers: {
-    setEmployeesList(state, action) {
-      const newEmployee = { ...action.payload, id: nanoid() }
-      state.push(newEmployee)
+    setEmployeesList(state, { payload }) {
+      state = payload
       return state
     },
     removeEmployee(state, action) {
