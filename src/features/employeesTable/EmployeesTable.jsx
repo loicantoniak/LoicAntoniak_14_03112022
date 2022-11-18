@@ -33,7 +33,7 @@ export default function Table({ data, columns }) {
     {
       columns,
       data: data,
-      initialState: { pageSize: 5 },
+      initialState: { pageSize: options[0].value },
     },
     useGlobalFilter,
     useFilters,
@@ -102,26 +102,32 @@ export default function Table({ data, columns }) {
           ))}
         </thead>
         <tbody {...getTableBodyProps()}>
-          {page.map((row, i) => {
-            prepareRow(row)
-            return (
-              <tr key={i} {...row.getRowProps()}>
-                {row.cells.map((cell, index) => {
-                  return (
-                    <td key={index} {...cell.getCellProps()}>
-                      {cell.render("Cell")}
-                    </td>
-                  )
-                })}
-              </tr>
-            )
-          })}
+          {page.length === 0 ? (
+            <tr >
+              <td colSpan="9">No data available in table</td>
+            </tr>
+          ) : (
+            page.map((row, i) => {
+              prepareRow(row)
+              return (
+                <tr key={i} {...row.getRowProps()}>
+                  {row.cells.map((cell, index) => {
+                    return (
+                      <td key={index} {...cell.getCellProps()}>
+                        {cell.render("Cell")}
+                      </td>
+                    )
+                  })}
+                </tr>
+              )
+            })
+          )}
         </tbody>
       </table>
 
       <div className="d-flex align-items-center justify-content-between">
         <span>
-          Showing {pageIndex * pageSize + 1} to {pageIndex * pageSize + page.length} of {rows?.length} entries
+          Showing {page.length === 0 ? 0 : pageIndex * pageSize + 1} to {pageIndex * pageSize + page.length} of {rows?.length} entries
         </span>
 
         <div className="d-flex align-items-center justify-content-between">

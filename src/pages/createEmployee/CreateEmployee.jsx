@@ -7,9 +7,10 @@ import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 import Select from "react-select"
 import { states, departments } from "../../lib/constant"
-import { setEmployeesList } from "../../redux/reducers/employees"
+import { addEmployee } from "../../redux/reducers/employees"
 import { useDispatch, useSelector } from "react-redux"
 import { nanoid } from "@reduxjs/toolkit"
+import { saveInLocalStorage } from "../../service/backend"
 
 const employee = {
   firstName: "",
@@ -49,10 +50,8 @@ export default function CreateEmployee() {
       birthDate: values.birthDate.toString(),
       startDate: values.startDate.toString(),
     }
-
-    localStorage.setItem("employees", JSON.stringify([...employees, data]))
-
-    dispatch(setEmployeesList([...employees, data]))
+    saveInLocalStorage("employees", [...employees, data])
+    dispatch(addEmployee(data))
     resetForm(employee)
   }
 
