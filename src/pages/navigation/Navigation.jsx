@@ -12,12 +12,285 @@ import NoMatch from "../noMatch/Nomatch"
 export default function Navigation() {
   const dispatch = useDispatch()
 
+  const e = [
+    {
+      firstName: "Loïc",
+      lastName: "Antoniak",
+      birthDate: "Mon Dec 04 1989 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      startDate: "Wed Jan 01 2020 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      street: "1st street",
+      city: "New York",
+      state: {
+        value: "NY",
+        label: "New York",
+      },
+      code: 1,
+      department: {
+        value: "rh",
+        label: "Human Resource",
+      },
+      id: "4uanfhFg7A",
+    },
+    {
+      firstName: "Jean",
+      lastName: "Dujardin",
+      birthDate: "Wed Jan 09 1980 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      startDate: "Tue Jan 01 2019 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      street: "2nd street",
+      city: "Los Angeles",
+      state: {
+        value: "CA",
+        label: "California",
+      },
+      code: 51,
+      department: {
+        value: "marketing",
+        label: "Marketing",
+      },
+      id: "QjKDjBbpDB",
+    },
+    {
+      firstName: "Jean",
+      lastName: "Dujardin",
+      birthDate: "Wed Jan 09 1980 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      startDate: "Tue Jan 01 2019 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      street: "2nd street",
+      city: "Los Angeles",
+      state: {
+        value: "CA",
+        label: "California",
+      },
+      code: 51,
+      department: {
+        value: "marketing",
+        label: "Marketing",
+      },
+      id: "QjKDjBbpDB",
+    },
+    {
+      firstName: "Jean",
+      lastName: "Dujardin",
+      birthDate: "Wed Jan 09 1980 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      startDate: "Tue Jan 01 2019 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      street: "2nd street",
+      city: "Los Angeles",
+      state: {
+        value: "CA",
+        label: "California",
+      },
+      code: 51,
+      department: {
+        value: "marketing",
+        label: "Marketing",
+      },
+      id: "QjKDjBbpDB",
+    },
+    {
+      firstName: "Jean",
+      lastName: "Dujardin",
+      birthDate: "Wed Jan 09 1980 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      startDate: "Tue Jan 01 2019 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      street: "2nd street",
+      city: "Los Angeles",
+      state: {
+        value: "CA",
+        label: "California",
+      },
+      code: 51,
+      department: {
+        value: "marketing",
+        label: "Marketing",
+      },
+      id: "QjKDjBbpDB",
+    },
+    {
+      firstName: "Jean",
+      lastName: "Dujardin",
+      birthDate: "Wed Jan 09 1980 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      startDate: "Tue Jan 01 2019 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      street: "2nd street",
+      city: "Los Angeles",
+      state: {
+        value: "CA",
+        label: "California",
+      },
+      code: 51,
+      department: {
+        value: "marketing",
+        label: "Marketing",
+      },
+      id: "QjKDjBbpDB",
+    },
+    {
+      firstName: "Jean",
+      lastName: "Dujardin",
+      birthDate: "Wed Jan 09 1980 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      startDate: "Tue Jan 01 2019 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      street: "2nd street",
+      city: "Los Angeles",
+      state: {
+        value: "CA",
+        label: "California",
+      },
+      code: 51,
+      department: {
+        value: "marketing",
+        label: "Marketing",
+      },
+      id: "QjKDjBbpDB",
+    },
+    {
+      firstName: "Jean",
+      lastName: "Dujardin",
+      birthDate: "Wed Jan 09 1980 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      startDate: "Tue Jan 01 2019 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      street: "2nd street",
+      city: "Los Angeles",
+      state: {
+        value: "CA",
+        label: "California",
+      },
+      code: 51,
+      department: {
+        value: "marketing",
+        label: "Marketing",
+      },
+      id: "QjKDjBbpDB",
+    },
+    {
+      firstName: "Jean",
+      lastName: "Dujardin",
+      birthDate: "Wed Jan 09 1980 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      startDate: "Tue Jan 01 2019 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      street: "2nd street",
+      city: "Los Angeles",
+      state: {
+        value: "CA",
+        label: "California",
+      },
+      code: 51,
+      department: {
+        value: "marketing",
+        label: "Marketing",
+      },
+      id: "QjKDjBbpDB",
+    },
+    {
+      firstName: "Jean",
+      lastName: "Dujardin",
+      birthDate: "Wed Jan 09 1980 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      startDate: "Tue Jan 01 2019 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      street: "2nd street",
+      city: "Los Angeles",
+      state: {
+        value: "CA",
+        label: "California",
+      },
+      code: 51,
+      department: {
+        value: "marketing",
+        label: "Marketing",
+      },
+      id: "QjKDjBbpDB",
+    },
+    {
+      firstName: "Jean",
+      lastName: "Dujardin",
+      birthDate: "Wed Jan 09 1980 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      startDate: "Tue Jan 01 2019 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      street: "2nd street",
+      city: "Los Angeles",
+      state: {
+        value: "CA",
+        label: "California",
+      },
+      code: 51,
+      department: {
+        value: "marketing",
+        label: "Marketing",
+      },
+      id: "QjKDjBbpDB",
+    },
+    {
+      firstName: "Jean",
+      lastName: "Dujardin",
+      birthDate: "Wed Jan 09 1980 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      startDate: "Tue Jan 01 2019 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      street: "2nd street",
+      city: "Los Angeles",
+      state: {
+        value: "CA",
+        label: "California",
+      },
+      code: 51,
+      department: {
+        value: "marketing",
+        label: "Marketing",
+      },
+      id: "QjKDjBbpDB",
+    },
+    {
+      firstName: "Jean",
+      lastName: "Dujardin",
+      birthDate: "Wed Jan 09 1980 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      startDate: "Tue Jan 01 2019 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      street: "2nd street",
+      city: "Los Angeles",
+      state: {
+        value: "CA",
+        label: "California",
+      },
+      code: 51,
+      department: {
+        value: "marketing",
+        label: "Marketing",
+      },
+      id: "QjKDjBbpDB",
+    },
+    {
+      firstName: "Jean",
+      lastName: "Dujardin",
+      birthDate: "Wed Jan 09 1980 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      startDate: "Tue Jan 01 2019 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      street: "2nd street",
+      city: "Los Angeles",
+      state: {
+        value: "CA",
+        label: "California",
+      },
+      code: 51,
+      department: {
+        value: "marketing",
+        label: "Marketing",
+      },
+      id: "QjKDjBbpDB",
+    },
+    {
+      firstName: "Jean",
+      lastName: "Dujardin",
+      birthDate: "Wed Jan 09 1980 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      startDate: "Tue Jan 01 2019 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      street: "2nd street",
+      city: "Los Angeles",
+      state: {
+        value: "CA",
+        label: "California",
+      },
+      code: 51,
+      department: {
+        value: "marketing",
+        label: "Marketing",
+      },
+      id: "QjKDjBbpDB",
+    },
+  ]
+
   useEffect(() => {
     const employees = loadState("employees")
     if (employees) {
-      dispatch(setEmployeesList(employees))
+      dispatch(setEmployeesList(e))
     }
-  }, [])
+  }, [dispatch])
 
   return (
     <div className="container">

@@ -4,3 +4,27 @@
   padding: 0 2rem;
   margin-bottom: 3rem;
 }
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.mr-1 {
+  margin-right: $spacing-level1;
+}
+
+.mx-1 {
+  margin: 0 $spacing-level1;
+}

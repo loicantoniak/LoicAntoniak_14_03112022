@@ -1,0 +1,29 @@
+table {
+  margin: 0 auto $spacing-level4;
+  width: 100%;
+  border-spacing: 0;
+
+  svg {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  tr {
+    height: 4rem;
+  }
+
+  th {
+    user-select: none;
+  }
+
+  tbody {
+    tr {
+      &:nth-of-type(odd) {
+        background-color: $color-border;
+      }
+    }
+    td {
+      text-align: center;
+    }
+  }
+}

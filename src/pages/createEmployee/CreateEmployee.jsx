@@ -6,11 +6,10 @@ import TextInput from "../../components/form/TextInput"
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 import Select from "react-select"
-import { states } from "../../lib/states"
-import { departments } from "../../lib/departments"
+import { states, departments } from "../../lib/constant"
 import { setEmployeesList } from "../../redux/reducers/employees"
 import { useDispatch, useSelector } from "react-redux"
-import { useEffect } from "react"
+import { nanoid } from "@reduxjs/toolkit"
 
 const employee = {
   firstName: "",
@@ -29,11 +28,11 @@ const employeeSchema = Yup.object().shape({
   lastName: Yup.string().min(2, "Too short !").max(50, "Too long !").required("Required"),
   birthDate: Yup.string().required("Required"),
   startDate: Yup.string().required("Required"),
-  street: Yup.string().min(2, "Too short !").max(50, "Too long !").required("Required"),
-  city: Yup.string().min(2, "Too short !").max(50, "Too long !").required("Required"),
-  state: Yup.object().required("Required").nullable(),
-  code: Yup.number().required("Required"),
-  department: Yup.object().required("Required").nullable(),
+  street: Yup.string().min(2, "Too short !").max(50, "Too long !"),
+  city: Yup.string().min(2, "Too short !").max(50, "Too long !"),
+  state: Yup.object().nullable(),
+  code: Yup.number(),
+  department: Yup.object().nullable(),
 })
 
 export default function CreateEmployee() {
@@ -43,11 +42,10 @@ export default function CreateEmployee() {
   const state_options = states.map((state) => ({ value: state.abbreviation, label: state.name }))
   const employees = useSelector((state) => state.employees)
 
-  useEffect(() => {}, [employees])
-
   function handleSubmit(values, { resetForm }) {
     const data = {
       ...values,
+      id: nanoid(10),
       birthDate: values.birthDate.toString(),
       startDate: values.startDate.toString(),
     }

@@ -8,13 +8,9 @@ const employeeSlice = createSlice({
       state = payload
       return state
     },
-    removeEmployee(state, action) {
-      const employeeId = action.payload
-      return state.filter((e) => e.id !== employeeId)
-    },
   },
 })
 
-export const { setEmployeesList, removeEmployee } = employeeSlice.actions
+export const { setEmployeesList } = employeeSlice.actions
 
 export default employeeSlice.reducer
