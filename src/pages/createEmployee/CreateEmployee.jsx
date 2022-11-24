@@ -11,6 +11,7 @@ import { addEmployee } from "../../redux/reducers/employees"
 import { useDispatch, useSelector } from "react-redux"
 import { nanoid } from "@reduxjs/toolkit"
 import { saveInLocalStorage } from "../../service/backend"
+import CreateEmployeeModal from "../../components/modal/CreateEmployeeModal/CreateEmployeeModal"
 
 const employee = {
   firstName: "",
@@ -40,6 +41,7 @@ export default function CreateEmployee() {
   const dispatch = useDispatch()
   const [isClearable] = useState(true)
   const [isSearchable] = useState(true)
+  const [showModal, setShowModal] = useState(false)
   const state_options = states.map((state) => ({ value: state.abbreviation, label: state.name }))
   const employees = useSelector((state) => state.employees)
 
@@ -53,6 +55,7 @@ export default function CreateEmployee() {
     saveInLocalStorage("employees", [...employees, data])
     dispatch(addEmployee(data))
     resetForm(employee)
+    setShowModal(true)
   }
 
   return (
@@ -169,6 +172,8 @@ export default function CreateEmployee() {
           </Form>
         )}
       </Formik>
+
+      <CreateEmployeeModal show={showModal} onHide={() => setShowModal(false)} />
     </div>
   )
 }
