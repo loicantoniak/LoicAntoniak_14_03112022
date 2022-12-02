@@ -55,10 +55,11 @@ export default function Table({ data, columns }) {
     <div className="mt-5">
       <div className="d-flex align-items-center justify-content-between">
         <div className="d-flex align-items-center justify-content-between">
-          Show
+          <label htmlFor="page" id="page-label">Show</label>
           <Select
             className="mx-1"
             name="pageSize"
+            inputId="page"
             defaultValue={pageSize}
             options={options}
             onChange={(e) => {

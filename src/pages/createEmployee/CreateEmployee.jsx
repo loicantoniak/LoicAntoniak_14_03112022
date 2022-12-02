@@ -115,9 +115,10 @@ export default function CreateEmployee() {
                 <TextInput name="street" label="Street" />
                 <TextInput name="city" label="City" />
                 <div>
-                  <label htmlFor="state">State</label>
+                  <label htmlFor="state"  id="state-label">State</label>
                   <Select
                     name="state"
+                    inputId="state"
                     options={state_options}
                     isClearable={isClearable}
                     isSearchable={isSearchable}
@@ -143,9 +144,10 @@ export default function CreateEmployee() {
 
             <div className={style.group}>
               <div>
-                <label htmlFor="department">Department</label>
+                <label htmlFor="department" id="department-label">Department</label>
                 <Select
                   name="department"
+                  inputId="department"
                   options={departments}
                   isClearable={isClearable}
                   isSearchable={isSearchable}

@@ -22,7 +22,7 @@
     color: $color-white;
 
     &:active:not([disabled]) , &:hover:not([disabled]) {
-      background-color: darken($color-secondary, 10%);
+      background-color: $color-interactive;
     }
   }
 

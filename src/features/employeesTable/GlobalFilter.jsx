@@ -14,9 +14,10 @@ GlobalFilter.defaultProps = {
 export default function GlobalFilter({ value, onChange }) {
   return (
     <div className="d-flex align-items-center">
-      <div style={{ width: "6rem" }}>Search :</div>
+      <label htmlFor="search" id="search-label" style={{ width: "6rem" }}>Search :</label>
       <input
         className="form-control"
+        id="search"
         name="search"
         value={value || ""}
         onChange={(e) => {
