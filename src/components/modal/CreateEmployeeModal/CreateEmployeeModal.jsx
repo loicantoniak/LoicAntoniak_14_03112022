@@ -9,6 +9,12 @@ CreateEmployeeModal.propTypes = {
   onHide: PropTypes.func.isRequired,
 }
 
+/**
+ * Modale use like an ux validation : use  @loicantoniak/react-modal 's package with custom
+ * @param {show} bool  
+ * @param {onHide} function to close the modal  
+ * @returns 
+ */
 export default function CreateEmployeeModal({ show, onHide }) {
   return (
     <ReactModal

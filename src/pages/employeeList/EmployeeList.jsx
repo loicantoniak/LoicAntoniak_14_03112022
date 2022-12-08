@@ -3,6 +3,10 @@ import { format } from "date-fns/esm"
 import { useSelector } from "react-redux"
 import EmployeesTable from "../../features/employeesTable/EmployeesTable"
 
+/**
+ * Component for showing employees into a table
+ * @returns 
+ */
 export default function EmployeeList() {
   const employees = useSelector((state) => state.employees)
 

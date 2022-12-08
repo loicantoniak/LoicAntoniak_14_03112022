@@ -7,6 +7,12 @@ TextInput.propTypes = {
   label: PropTypes.string.isRequired,
 }
 
+/**
+ *
+ * @param {name} string name of the input (unique)
+ * @param {label} string represent the label of the input
+ * @returns
+ */
 export default function TextInput({ name, label, ...props }) {
   return (
     <div>

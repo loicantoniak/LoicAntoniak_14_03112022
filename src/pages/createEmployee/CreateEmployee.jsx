@@ -37,6 +37,10 @@ const employeeSchema = Yup.object().shape({
   department: Yup.object().nullable(),
 })
 
+/**
+ * Component for creating an employee
+ * @returns 
+ */
 export default function CreateEmployee() {
   const dispatch = useDispatch()
   const [isClearable] = useState(true)
