@@ -142,7 +142,7 @@ export default function CreateEmployee() {
                   <ErrorMessage name="state">{(error) => <div className="error">{error}</div>}</ErrorMessage>
                 </div>
 
-                <TextInput name="code" label="Zip Code" type="number" />
+                <TextInput name="code" label="Zip Code" type="number" min={0}/>
               </div>
             </fieldset>
 
@@ -153,6 +153,7 @@ export default function CreateEmployee() {
                   name="department"
                   inputId="department"
                   options={departments}
+                  menuPlacement={"top"}
                   isClearable={isClearable}
                   isSearchable={isSearchable}
                   onChange={(department) => formik.setFieldValue("department", department)}
